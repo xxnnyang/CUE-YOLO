@@ -28,7 +28,7 @@ dataset = args.dataset
 
 if __name__ == '__main__':
     
-    model = YOLO(f'./summer/cfg/{model}.yaml')
+    model = YOLO(f'./cfg/{model}.yaml')
     
     name = f'{name}-{loss}'
     

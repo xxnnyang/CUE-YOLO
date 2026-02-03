@@ -5,13 +5,9 @@ import torch
 
 if __name__ == '__main__':
 
-    # name = 'yolo11-C3k2-DAttention'
-    # name = 'yolo11-TADDH'
-    # name = 'yolo11-TADDH-C3k2-DAttention'
     name = 'yolov11-loss'
     
-    
-    model = YOLO(f'./summer/runs/train/NEU-DET-flip/{name}/weights/best.pt')
+    model = YOLO(f'./runs/train/NEU-DET-flip/{name}/weights/best.pt')
     model = torch.compile(model)
     
     model.val(data='./dataset/NEU-DET-flip/data.yaml',
